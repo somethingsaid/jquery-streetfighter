@@ -26,7 +26,8 @@ $(document).ready(function() {
     .mouseup(function() {
 
     	$('.ryu-throwing').hide();
-    	$('.ryu-ready').show();
+    	$('.ryu-ready').hide();
+    	$('.ryu-still').show()
     });
     
     // solving bug - when mouseup over .hadouken, both .ryu-ready and .ryu-throwing are displayed
@@ -36,18 +37,17 @@ $(document).ready(function() {
 
     // make Ryu look cool when pressing 'x' key
     $(document).keydown(function(e) {
-    	if (e.which == 88) {
+    	if (e.keyCode == 88) {
     		$(".ryu-ready").hide();
-    		$(".ryu-throwing").hide();
-    		$(".ryu-still").hide();
+    		$(".ryu-still").hide()
     		$(".ryu-cool").show();
     	}
-    });
-
-    $(document).keyup(function() {
-    	$(".ryu-still").show();
-    	$(".ryu-ready").hide();
-    	$(".ryu-cool").hide();
+    })
+    .keyup(function(e) {
+    	if (e.keyCode == 88) {
+    	    $(".ryu-cool").hide();
+    	    $(".ryu-still").show();
+    	}
     });
 
     // define Audio for hadouken

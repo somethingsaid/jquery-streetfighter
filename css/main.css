@@ -17,6 +17,14 @@ body {
     z-index: 1;
 }
 
+/* Instructions */
+.instructions {
+	position: absolute;
+	left: 900px;
+	top: 50px;
+	font-family: Impact;
+	font-size: 30px;
+}
 
 /* Ryu Declarations */
 .ryu {
@@ -68,3 +76,4 @@ body {
     top: 170px;
     left: 560px;
 }
+
