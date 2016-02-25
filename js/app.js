@@ -2,13 +2,13 @@ $(document).ready(function() {
 
 var audiocue = 0;
 // define Audio for hadouken
-function playHadouken () {
+function playHadouken() {
     $('#hadouken-sound')[0].volume = 0.5;
     $('#hadouken-sound')[0].load();
     $('#hadouken-sound')[0].play();
 }
 
-function playTheme () {
+function playTheme() {
 	$('#ryu-theme')[0].volume = 0.5;
 	$('#ryu-theme')[0].load();
 	$('#ryu-theme')[0].loop = true;
@@ -21,6 +21,7 @@ function stopTheme() {
 	$('#ryu-theme')[0].currenttime = 0
 	audiocue = 0;
 }
+
 // method chaining - browser listens for a series of events on .ryu div
 $(".ryu").mouseenter(function() {
 	// hide all other states, show only .ryu-ready
@@ -58,6 +59,7 @@ $(document).keydown(function(e) {
     if (e.which == 88) {
         $('.ryu-state').hide();
 	    $(".ryu-cool").show();
+	    playPerfect();
     }
 })
 .keyup(function(e) {
