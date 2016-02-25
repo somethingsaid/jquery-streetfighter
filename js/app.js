@@ -7,6 +7,14 @@ function playHadouken () {
     $('#hadouken-sound')[0].play();
 }
 
+function playTheme () {
+	$('#ryu-theme')[0].volume = 0.5;
+	$('#ryu-theme')[0].load();
+	$('#ryu-theme')[0].loop = true;
+	$('#ryu-theme')[0].play();
+}
+
+  playTheme();
 // method chaining - browser listens for a series of events on .ryu div
 $(".ryu").mouseenter(function() {
 	// hide all other states, show only .ryu-ready
