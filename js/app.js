@@ -23,7 +23,7 @@ function stopTheme() {
 }
 
 // method chaining - browser listens for a series of events on .ryu div
-$(".ryu").mouseenter(function() {
+$(".ryu").mouseover(function() {
 	// hide all other states, show only .ryu-ready
     $('.ryu-state').hide();
     $('.ryu-ready').show();
@@ -64,7 +64,7 @@ $(document).keydown(function(e) {
 })
 .keyup(function(e) {
     if (e.which == 88) {
-        $(".ryu-cool").hide();
+        $(".ryu-state").hide();
         $(".ryu-still").show();
     }
 });
